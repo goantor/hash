@@ -1,3 +1,3 @@
-module github.com/goantor/utils/hash
+module github.com/goantor/hash
 
 go 1.19
