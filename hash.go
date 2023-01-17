@@ -5,6 +5,7 @@ import (
 	_ "crypto/md5"
 	_ "crypto/sha1"
 	_ "crypto/sha256"
+	"fmt"
 )
 
 type Type struct {
@@ -29,9 +30,9 @@ func (t Type) Bytes() []byte {
 func (t Type) String() string {
 	switch t.data.(type) {
 	case []byte:
-		return string(t.data.([]byte))
+		return fmt.Sprintf("%x", t.data.([]byte))
 	case string:
-		return t.data.(string)
+		return fmt.Sprintf("%x", t.data.(string))
 	}
 
 	panic("not allowed type")
