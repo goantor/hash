@@ -32,7 +32,7 @@ func (t Type) String() string {
 	case []byte:
 		return fmt.Sprintf("%x", t.data.([]byte))
 	case string:
-		return fmt.Sprintf("%x", t.data.(string))
+		return t.data.(string)
 	}
 
 	panic("not allowed type")
